@@ -14,7 +14,9 @@ const ShowBook = () => {
     axios
       .get(`http://localhost:5555/books/${id}`)
       .then((response) => {
-        setBook(response.data);
+        setBook(response.data.book);
+       
+        
         setLoading(false);
       })
       .catch((error) => {
@@ -24,9 +26,9 @@ const ShowBook = () => {
   }, []);
 
   return (
-    <div className='p-4'>
+    <div className='p-4 mx-auto'>
       <BackButton />
-      <h1 className='text-3xl my-4'>Show Book</h1>
+      <h1 className='text-3xl my-4 '>Show Book</h1>
       {loading ? (
         <Spinner />
       ) : (
