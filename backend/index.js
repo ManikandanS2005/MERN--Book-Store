@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 });
 
 
-mongoose.connect(MongoDBURL)
+mongoose.connect(process.env.MongoDBURI)
     .then(() => {
         console.log("Mongodb Connected Successfully");
         app.listen(PORT, () => {
