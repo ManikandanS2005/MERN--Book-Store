@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use(cors(
     {
-        origin:'http://localhost:5173',
+        origin:'https://mern-book-store-ui.vercel.app',
         methods:['GET','PUT','POST','DELETE'],
         allowedHeaders:['Content-Type'],
     }
